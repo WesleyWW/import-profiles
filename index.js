@@ -36,7 +36,7 @@ const getSecurity = (array) => {
   for(person of array) { 
     //Build a ranger object
     let ranger = { 
-          "id":         person['ID'], //value from 'ID' column of this row
+          "id":         person['ID'],
           "firstName":  person['FIRST_NAME'],
           "lastName":   person['LAST_NAME'],
           "email":      person['EMAIL']
@@ -45,8 +45,8 @@ const getSecurity = (array) => {
     //Using the ranger's id as the key
     security[ranger.id] = ranger
   }
-  console.table({security}) 
-  console.log({security})
+  // console.table(security) 
+  // console.log({security})
   return security
 }
 /* run the 'start' command in the console again to see the results*/
@@ -57,3 +57,4 @@ getSecurity(records)
  * explore it and open up 'import.js'.
 */
 
+module.exports = getSecurity
