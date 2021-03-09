@@ -5,14 +5,14 @@ const filePath = 'security.csv'
 
 const data = fs.readFileSync(filePath)
 
-let faculty = parse(data, {
+const faculty = parse(data, {
   columns: true,
   skip_empty_lines: true
 })
 const getSecurity = require('./index')
 
 
-let sacuridy = {
+const sacuridy = {
     '11111': {
       id: '11111',
       firstName: 'Billy',
@@ -44,7 +44,7 @@ let sacuridy = {
       email: expect.stringMatching(/Zack@mmpr.org|zack@mmpr.org/)
     }
 }
-let sacuridy2 = {
+const sacuridy2 = {
   '11111': {
     id: '11111',
     firstName: 'Billy',
