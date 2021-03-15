@@ -57,8 +57,7 @@ getSecurity(records)
  * to create a new JSON object of our security team.  Expand the 'problem1' folder,
  * explore it and open up 'import.js'.
 */
-let str = ' string'
-str.trim()
-console.log(str)
+
+
 
 module.exports = getSecurity

@@ -76,6 +76,7 @@ const sacuridy2 = {
     email: 'zack@mmpr.org'
   }
 }
+
 test('Sufficient', () => {
     expect(getSecurity(faculty)).toMatchObject(sacuridy)
 })

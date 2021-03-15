@@ -1,7 +1,7 @@
 const fs = require('fs')
 const parse = require('csv-parse/lib/sync')
 
-const filePath = './data/staff.csv'
+const filePath = './problem1/data/staff.csv'
 
 const data = fs.readFileSync(filePath)
 
@@ -22,11 +22,22 @@ facultyImport = (array) => {
     let staff = {}
 
     for(person of array){
-        
-    }
+        let staffId = person['TEACHER_ID']//+""
+        let email = person['EMAIL'].toLowerCase().trim()
+        let phone = person['PHONE']+""
 
+        let user = { staffId, firstName: person['FIRST_NAME'], lastName: person['LAST_NAME'], email }
+        
+        if(phone && phone.length > 0){
+          user.phone = phone
+        }
+
+        staff[staffId] = user
+    }
+    console.log({staff})
     return staff
 }
 
 facultyImport(faculty)
 
+module.exports = facultyImport;
